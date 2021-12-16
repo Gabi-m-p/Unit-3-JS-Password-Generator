@@ -43,7 +43,8 @@ var useSpecialcharacters = window.confirm ("Do you wany to include special chara
 var useNumbers = window.confirm ("Do you want to include numbers in your password?")
 
 
-var passwordCharacters = "";
+var passwordCharacters = (setLength, upperCase, lowerCase, special, numbers);
+
   if (useSpecialcharacters)
     passwordCharacters = passwordCharacters + special;
 
@@ -58,10 +59,10 @@ var passwordCharacters = "";
 
 
 
-var options = [lowerCase, upperCase, special, numbers]; 
+var options = ""
 
-
-for (var i = 0; i < options.length; i++) {
+for (var i = 0; i < options.setLength; i++) {
+  var declaredPassword = Math.floor(Math.random() * upperCase.length);
   
   
  
