@@ -9,7 +9,7 @@ var lowerCase = ["qwertyuiopasdfghjklzxcvbnm"]
 var numbers = ["1234567890"]
 
 // Add event listener to generate button - given code
-generateBtn.addEventListener("click", writePassword);
+
 
 //set length of min 8, max 128
 
@@ -20,7 +20,7 @@ setLength = window.prompt ("Choose password length between 8 and 128 characters"
     
 
   
-console.log = "set password length"
+
   
 
 // Add event listener to generate button - given
@@ -33,7 +33,10 @@ function writePassword() {
   passwordText.value = password;
 }
 
+generateBtn.addEventListener("click", writePassword);
+
 function generatePassword(){
+  
 //use prompts to determine what characters the user wants to include in password.
 
 var useUpper = window.confirm ("Do you want to include uppercase letters in your password?");
@@ -41,20 +44,41 @@ var useLower = window.confirm ("Do you want to include lowercase letters in your
 var useSpecialcharacters = window.confirm ("Do you wany to include special characters in your password?");
 var useNumbers = window.confirm ("Do you want to include numbers in your password?")
 
+
+
+var passwordCharacters = "";
+  if (useSpecialcharacters)
+    passwordCharacters = passwordCharacters + special;
+
+  if (useUpper)
+    passwordCharacters = passwordCharacters + upperCase;
+
+  if (useLower)
+    passwordCharacters = passwordCharacters + lowerCase;
+
+  if (useNumbers)
+    passwordCharacters = passwordCharacters + numbers;
+
+
+
+var declaredPassword = upperCase, lowerCase, special, numbers;
+
+for (var i = 0; i <= setLength; i++) {
+  var declaredPassword = Math.floor(Math.random() * upperCase.length * lowerCase.length * numbers.length * special.length);
+  
+ }
+  
+
+return declaredPassword;
+
+
 }
-
-console.log ("Using special characters?", useSpecialcharacters);
-console.log ("Using uppercase letters?", useUpper);
-console.log ("Using lowercase characters?", useLower);
-console.log ("Using numbers?", useNumbers);
-
-
 
 // Write password to the #password input - given
 
 
 // Add event listener to generate button - given code
-generateBtn.addEventListener("click", writePassword);
+
 
 
 
