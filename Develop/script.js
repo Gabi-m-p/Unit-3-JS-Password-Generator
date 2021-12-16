@@ -8,6 +8,9 @@ var upperCase = ["QWERTYUIOPASDFGHJKLZXCVBNM"]
 var lowerCase = ["qwertyuiopasdfghjklzxcvbnm"]
 var numbers = ["1234567890"]
 
+
+var characterCollection = ""
+var password = ""
 // Add event listener to generate button - given code
 
 
@@ -26,21 +29,20 @@ setLength = window.prompt ();
   
 
 // Add event listener to generate button - given
-generateBtn.addEventListener("click", writePassword);
-
 // Write password to the #password input - given
 function writePassword() {
-  console.log("Password", password);
-  var password = generatePassword();
+  
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
-
-
+var password = generatePassword();
 function generatePassword(){
   
+
+  generateBtn.addEventListener("click", writePassword);
+
 //use prompts to determine what characters the user wants to include in password.
 
 var useUpper = window.confirm ("Do you want to include uppercase letters in your password?");
@@ -49,29 +51,30 @@ var useSpecialcharacters = window.confirm ("Do you wany to include special chara
 var useNumbers = window.confirm ("Do you want to include numbers in your password?")
 
 
-var passwordCharacters = (setLength, upperCase, lowerCase, special, numbers);
-
-  if (useSpecialcharacters)
-    passwordCharacters = passwordCharacters + special;
-
-  if (useUpper)
-    passwordCharacters = passwordCharacters + upperCase;
-
-  if (useLower)
-    passwordCharacters = passwordCharacters + lowerCase;
-
-  if (useNumbers)
-    passwordCharacters = passwordCharacters + numbers;
-
-
-var password = "";
-
-
-for (var i = 0; i < passwordLength; i++) {
-   index = Math.floor(Math.random() * passwordCharacters.length);
-    password = password + passwordCharacters[index]
   
- 
+var characterCollections = []
+if (useSpecialcharacters)
+characterCollections.push(specialcharacters)
+
+if (useUpper)
+characterCollections.push(upperCaseCharacters)
+
+if (useLower)
+characterCollections.push(lowerCaseCharacters)
+
+if (useNumbers)
+characterCollections.push(numbersCharacters)
+      
+var password = ""
+for (var i = 0; i < passwordLength; i++) {
+        var characterCollectionIndex = Math.floor(Math.random() * characterCollections.length);
+        var characterCollection = characterCollections[characterCollectionIndex]
+    
+        var characterIndex = Math.floor(Math.random() * characterCollection.length);
+        var character = characterCollection[characterIndex]
+    
+        password = password + character
+        
 }
 return password;
 
