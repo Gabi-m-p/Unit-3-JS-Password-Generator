@@ -13,8 +13,11 @@ generateBtn.addEventListener("click", writePassword);
 
 //set length of min 8, max 128
 
-var setLength = window.prompt ("Choose password length between 8 and 128 characters"); 
-  if (setLength === < 8 || setLength > 128)
+var setLength 
+setLength = ">8 || <128"
+
+setLength = window.prompt ("Choose password length between 8 and 128 characters"); 
+    
 
   
 console.log = "set password length"
