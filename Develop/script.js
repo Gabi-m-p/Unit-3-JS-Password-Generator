@@ -43,6 +43,7 @@ var useSpecialcharacters = window.confirm ("Do you wany to include special chara
 var useNumbers = window.confirm ("Do you want to include numbers in your password?")
 var passwordCharacters = (setLength, upperCase, lowerCase, special, numbers);
 
+
   if (useSpecialcharacters)
     passwordCharacters = passwordCharacters + special;
   if (useUpper)
@@ -54,7 +55,7 @@ var passwordCharacters = (setLength, upperCase, lowerCase, special, numbers);
 
 
 
-
+//write the for loop to run the continuous piece of code
 for (var i = 0; i < passwordLength; i++) {
    index = Math.floor(Math.random() * passwordCharacters.length);
     password = password + passwordCharacters[index]
