@@ -58,15 +58,15 @@ var passwordCharacters = "";
 
 
 
-var declaredPassword = ""
-var pswdLength = ">8 || <128"
+var options = [lowerCase, upperCase, special, numbers]; 
 
-for (var i = 0; i <= pswdLength; i++) {
-  var declaredPassword = Math.floor(Math.random() * upperCase * lowerCase * numbers * special);
+
+for (var i = 0; i < options.length; i++) {
   
- return declaredPassword;
+  
+ 
 }
-
+return declaredPassword;
 
 }
 
