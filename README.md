@@ -6,6 +6,6 @@ The need for strong and varied online password is incredibly important in contem
 ## Usage
 The password generator will ask the user a series of questions. The answers to these questions will contribute to the formation of the generated password.
 1. A password length is required.
-  ```md
-  ![passwordlength] (./JS-Password-generator/assets/passwordlength.png)
-  ```
+
+  ![passwordlength](./JS-Password-generator/assets/images/passwordlength.png)
+
