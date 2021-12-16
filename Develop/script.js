@@ -12,11 +12,16 @@ var numbers = ["1234567890"]
 
 
 //set length of min 8, max 128
+var passwordLength = parseInt(
+  prompt('Choose password length between 8 and 128 characters'),
+);
+
+
 
 var setLength 
 setLength = ">8 || <128"
 
-setLength = window.prompt ("Choose password length between 8 and 128 characters"); 
+setLength = window.prompt (); 
     
   
 
@@ -25,6 +30,7 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input - given
 function writePassword() {
+  console.log("Password", password);
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -58,16 +64,16 @@ var passwordCharacters = (setLength, upperCase, lowerCase, special, numbers);
     passwordCharacters = passwordCharacters + numbers;
 
 
+var password = "";
 
-var options = ""
 
-for (var i = 0; i < options.setLength; i++) {
-  var declaredPassword = Math.floor(Math.random() * upperCase.length);
-  
+for (var i = 0; i < passwordLength; i++) {
+   index = Math.floor(Math.random() * passwordCharacters.length);
+    password = password + passwordCharacters[index]
   
  
 }
-return declaredPassword;
+return password;
 
 }
 
