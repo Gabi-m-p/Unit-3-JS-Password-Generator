@@ -7,23 +7,23 @@ The need for strong and varied online password is incredibly important in contem
 The password generator will ask the user a series of questions. The answers to these questions will contribute to the formation of the generated password.
 1. A password length is required.
 
-  ![passwordlength](./assets/passwordlength.png)
+  ![passwordlength](./Assets/passwordlength.png)
 
 2. The user can choose whether to include Uppercase letters in their password.
 
-  ![uppercase](./assets/uppercase.png)
+  ![uppercase](./Assets/uppercase.png)
 
 3. The user can choose whether to include lowecase letters to their password.
 
-  ![lowercase](./assets/lowercase.png)
+  ![lowercase](./Assets/lowercase.png)
 
 4. The user can choose whether to include special characters in their password.
 
-  ![specialcharacters](./assets/specialcharacters.png)
+  ![specialcharacters](./Assets/specialcharacters.png)
 
 5. The user can choose whether to include numbers in their password.
 
-  ![numbers](./assets/numbers.png)
+  ![numbers](./Assets/numbers.png)
 
 ## Installation
 
